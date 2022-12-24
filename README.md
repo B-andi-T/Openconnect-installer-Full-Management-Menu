@@ -73,7 +73,7 @@ ssh -p 22 -f -N -L 0.0.0.0:2222:2.2.2.2:2222 root@2.2.2.2
 
 Now connect the client to your local server (such as mobile, computer, etc.). as below:
 ```
-yourlocalserverIP:2222
+yourlocalserverIP:PORT
 ```
 of course you will see the ""untrusted server"" message popup when connecting, and the reason is that you are not connecting directly to the main server where your domain and certificate are located.
 

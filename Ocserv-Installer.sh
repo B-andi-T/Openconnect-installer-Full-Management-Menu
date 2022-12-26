@@ -1481,10 +1481,8 @@ function newDomain() {
 
   echo -n "Enter your Domain (Like example.com or sub.example.com): "
   read domainInput
-  serverIPv4=$(hostname -I | awk '{print $1}')
   domainIP=$(getent hosts $domainInput | awk '{ print $1 }')
-  multiple_ip=$(hostname -I | awk '{print $1}' | grep -E $domainIP 2>/dev/null)
-  sd_match=$(getent hosts $domainInput | awk '{ print $1 }' | grep -E $serverIPv4 2>/dev/null)
+  serverIP_domainIP_match=$(hostname -I | grep -o $domainIP 2>/dev/null)
   if [[ -z $domainInput ]]; then
     echo -e "${RED}Domain is required${EC}"
     newDomain
@@ -1494,12 +1492,12 @@ function newDomain() {
 ${CYAN}You may have entered the domain incorrectly or you may not have set the DNS record of the domain correctly from your domain panel.${EC}"
       newDomain
     else
-      if ! [[ $domainIP == $sd_match ]] || ! [[ $domainIP == $multiple_ip ]]; then
+      if ! [[ $domainIP == $serverIP_domainIP_match ]]; then
         echo -e "${RED}The domain you entered does not match the IP of your server.${EC}
 ${YELLOW}The IP of the Domain you entered: ${EC}
     $domainIP
 ${YELLOW}Your Server IP: ${EC} 
-    $serverIPv4
+    $(hostname -I)
 ${CYAN}You may have entered the domain incorrectly or you may not have set the DNS record of the domain correctly from your domain panel.${EC}"
         newDomain
       fi

@@ -38,7 +38,7 @@ In the Add Multiple OCServ Menu, You can add multiple OCSERVs! Each of them can 
 ## How to use
 Download and execute the script
 ```
-wget https://raw.githubusercontent.com/B-andi-T/Openconnect-installer/main/Ocserv-Installer.sh
+wget https://raw.githubusercontent.com/B-andi-T/Openconnect-installer-Full-Management-Menu/main/Ocserv-Installer.sh
 chmod +x Ocserv-Installer.sh
 ./Ocserv-Installer.sh
 ```

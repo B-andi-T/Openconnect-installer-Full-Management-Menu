@@ -92,3 +92,4 @@ If you are happy with my script, you can make me happy too with a small amount o
 - [x] My LiteCoin Wallet : ltc1qkw00pa4u4wmhnl807v4grca0qpq2pl0z26hc8k
 
 Cheers!
+# Good luck

@@ -1439,7 +1439,7 @@ you can continue the operation to fix it."
   if [[ $CONTINUE == "n" ]]; then
     OCServMenu
   else
-    apt install -y git ruby-ronn libbsd-dev libsystemd-dev libpcl-dev libwrap0-dev libgnutls28-dev libev-dev libpam0g-dev liblz4-dev libseccomp-dev libreadline-dev libnl-route-3-dev libkrb5-dev libradcli-dev libcurl4-gnutls-dev libcjose-dev libjansson-dev libprotobuf-c-dev libtalloc-dev libhttp-parser-dev protobuf-c-compiler gperf nuttcp lcov libuid-wrapper libpam-wrapper libnss-wrapper libsocket-wrapper gss-ntlmssp haproxy iputils-ping freeradius gawk gnutls-bin iproute2 yajl-tools tcpdump
+    apt install -y git ruby-ronn libbsd-dev libsystemd-dev libpcl-dev libwrap0-dev libgnutls28-dev libev-dev libpam0g-dev liblz4-dev libseccomp-dev libreadline-dev libnl-route-3-dev libkrb5-dev libradcli-dev libcurl4-gnutls-dev libcjose-dev libjansson-dev libprotobuf-c-dev libtalloc-dev libhttp-parser-dev protobuf-c-compiler gperf nuttcp lcov libuid-wrapper libpam-wrapper libnss-wrapper libsocket-wrapper gss-ntlmssp haproxy iputils-ping freeradius gawk gnutls-bin iproute2 yajl-tools tcpdump ipcalc
     git clone https://gitlab.com/openconnect/ocserv.git
     cd ocserv
     autoreconf -fvi
